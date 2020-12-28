@@ -6,9 +6,9 @@ export default class Home extends React.Component{
     constructor(props){
       super(props);
       this.state = {
-          color: "Marange",
-          name: "Tiago",
-          model: "tata"
+          color: "Black",
+          name: "Banner",
+          model: "WIP"
         };
     }
 
@@ -29,7 +29,7 @@ export default class Home extends React.Component{
     }
   
     render(){
-        return <div><h3> Hi! I am a {this.state.color} colored {this.state.model} {this.state.name} HOME!</h3>
+        return <div><h3> Hi! I am a {this.state.color} colored {this.state.model} {this.state.name}</h3>
         <button type="button" onClick={this.changeColor}>
             Change Color
             </button>
