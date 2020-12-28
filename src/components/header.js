@@ -10,6 +10,7 @@ export default class Header extends React.Component{
           <Link to="/mypage/home">Home</Link>
           <Link to="/mypage/car">Car</Link>
           <Link to="/mypage/swipe">Swipe</Link>
+          <Link to="/mypage/planet">Planet</Link>
       </div> 
        )
     }
