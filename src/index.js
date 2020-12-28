@@ -13,9 +13,9 @@ class App extends React.Component{
         return(
             <BrowserRouter>
              <Header/>
-             <Route path="/home"><Home/></Route>
-             <Route path="/car"><Car/></Route>
-             <Route path="/swipe"><SwipeView/></Route>
+             <Route path="/mypage/home"><Home/></Route>
+             <Route path="/mypage/car"><Car/></Route>
+             <Route path="/mypage/swipe"><SwipeView/></Route>
             </BrowserRouter>
         )
     }

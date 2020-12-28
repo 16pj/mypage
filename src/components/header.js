@@ -7,9 +7,9 @@ export default class Header extends React.Component{
     render() {
        return(
         <div className="topnav">
-          <Link to="/home">Home</Link>
-          <Link to="/car">Car</Link>
-          <Link to="/swipe">Swipe</Link>
+          <Link to="/mypage/home">Home</Link>
+          <Link to="/mypage/car">Car</Link>
+          <Link to="/mypage/swipe">Swipe</Link>
       </div> 
        )
     }
