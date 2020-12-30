@@ -8,7 +8,7 @@ export default class Home extends React.Component{
       this.state = {
           color: "Black",
           name: "Banner",
-          model: "WIP"
+          model: "WORK-IN-PROGRESS"
         };
     }
 
@@ -19,8 +19,6 @@ export default class Home extends React.Component{
     shouldComponentUpdate() {
         return true
     }
-
-
 
     componentDidMount(){
         setTimeout(()=>{

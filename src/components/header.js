@@ -9,8 +9,8 @@ export default class Header extends React.Component{
         <div className="topnav">
           <Link to="/mypage/home">Home</Link>
           <Link to="/mypage/car">Car</Link>
-          <Link to="/mypage/swipe">Swipe</Link>
-          <Link to="/mypage/planet">Planet</Link>
+          <Link to="/mypage/swipe">About Me</Link>
+          <Link to="/mypage/planet">Technologies</Link>
       </div> 
        )
     }
