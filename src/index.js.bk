@@ -1,0 +1,159 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Car from "./car.js"
+
+// // var hello = function() {
+// //   return "This is Poppin!"
+// // }
+
+
+// class Parking extends React.Component{
+
+//   constructor(){
+//     super();
+//   }
+
+//   render(){
+//       return <h1> Who's parked in here? <Car color={this.props.color}/></h1>;
+//   }
+// }
+
+
+// // function Bar(){
+// //   return <h2> Hi This is a bar </h2>
+// // }
+
+// // var ello = () => {
+// //   return "This is Bobbin!"
+// // }
+
+// // var firstElement = <h1>{ello()}</h1>
+
+// ReactDOM.render(<Parking color="Magenta"/>, document.getElementById('robin'));
+
+
+class Child extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red", show: true};
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({favoritecolor: "yellow"})
+    }, 1000)
+  }
+
+  shoot(a, b){
+    console.log(a)
+    alert(b.type)
+  }
+
+  removeThis = () => {
+    this.setState({show: false});
+  }
+
+  componentWillUnmount() {
+    alert("The component named child is about to be unmounted.");
+    }
+
+  render() {
+    if (this.state.show){
+      return (
+        <div>
+          <h1>The Child component is {this.state.favoritecolor}</h1>
+          <button onClick={(ev)=> {this.shoot("Goal", ev)}}>Shoot</button>
+        </div>
+      );
+    } else {
+      return (
+        <div>Something else</div>
+      )
+    }
+  }
+}
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red", show: true};
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({favoritecolor: "yellow"})
+    }, 1000)
+  }
+
+  removeThis = () => {
+    this.setState({show: false});
+  }
+
+  componentWillUnmount() {
+    alert("The component named Header is about to be unmounted.");
+    }
+
+  render() {
+    if (this.state.show){
+      return (
+        <div>
+          <Child/>
+          <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+          <button onClick={this.removeThis}>Remove this</button>
+        </div>
+      );
+    } else {
+      return (
+        <div>Something else</div>
+      )
+    }
+  }
+}
+
+class MyForm extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {username: ''}
+  }
+
+
+  myChangeHandler = (evt) => {
+
+    let name = evt.target.name
+    let value = evt.target.value
+
+    this.setState({[name]: value})
+  }
+
+  mySubmitHandler = (event) => {
+    event.preventDefault();
+    alert("You're submitting " + this.state.username)
+  }
+
+  render(){
+    return (
+      <div>
+      <form onSubmit={this.mySubmitHandler}>
+      <h1>Yo! {this.state.name}</h1>
+      <h1>{this.state.age} year oldie</h1>
+       <p>Enter your name!</p>
+        <input type="text" 
+        name="name"
+        onChange={this.myChangeHandler}/>
+        <p>Enter your age!</p>
+        <input type="text" 
+        name="age"
+        onChange={this.myChangeHandler}/>
+        <input type="submit" value="LOL" />
+        </form>
+
+        <select defaultValue="volkswagen">
+          <option value="ford">Ford</option>
+          <option value="volvo">Volvo</option>
+          <option value="volkswagen">Volkswagen</option>
+
+        </select>
+        </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById('robin'));
