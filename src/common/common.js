@@ -2,6 +2,8 @@ function sum(a, b) {
     return a + b
 }
 
-module.exports = {
-    sum: sum
+if (typeof module !== 'undefined') {
+    module.exports = {
+        sum: sum
+    }
 }
