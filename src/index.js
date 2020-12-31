@@ -1,17 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Redirect, Route } from "react-router-dom";
+import Home from './components/home.js';
+// import Root from "./components/root.js";
+import Car from "./components/car.js"
+import Header from "./components/header.js"
+import SwipeView from "./components/swipeview.js"
+import MyPlanet from "./components/planetmenu.js"
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class App extends React.Component {
+    render() {
+        return (
+            <BrowserRouter>
+                <Header />
+                <Route path="/mypage/home"><Home /></Route>
+                <Route path="/mypage/car"><Car /></Route>
+                <Route path="/mypage/swipe"><SwipeView /></Route>
+                <Route path="/mypage/planet"><MyPlanet /></Route>
+                <Route exact path="/mypage">
+                    <Redirect to="/mypage/home" />
+                </Route>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+            </BrowserRouter>
+        )
+    }
+}
+
+ReactDOM.render(<App />, document.getElementById('robin'));
