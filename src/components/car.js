@@ -1,7 +1,7 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 
-import sum from "../common/common.js"
+import {sum} from "../common/common"
 
 export default class Car extends React.Component {
 
