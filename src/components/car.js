@@ -1,9 +1,7 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 
-function sum(a, b) {
-    return a + b
-}
+import sum from "../common/common.js"
 
 export default class Car extends React.Component {
 
@@ -39,4 +37,3 @@ export default class Car extends React.Component {
     }
 }
 
-module.exports = sum;
