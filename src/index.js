@@ -8,18 +8,18 @@ import Header from "./components/header.js"
 import SwipeView from "./components/swipeview.js"
 import MyPlanet from "./components/planetmenu.js"
 
-class App extends React.Component{
-    render(){
-        return(
+class App extends React.Component {
+    render() {
+        return (
             <BrowserRouter>
-             <Header/>
-             <Route path="/mypage">
-                 <Redirect to="/mypage/home"/>
-             </Route>
-             <Route path="/mypage/home"><Home/></Route>
-             <Route path="/mypage/car"><Car/></Route>
-             <Route path="/mypage/swipe"><SwipeView/></Route>
-             <Route path="/mypage/planet"><MyPlanet/></Route>
+                <Header />
+                <Route path="/mypage">
+                    <Redirect to="/mypage/home" />
+                </Route>
+                <Route path="/mypage/home"><Home /></Route>
+                <Route path="/mypage/car"><Car /></Route>
+                <Route path="/mypage/swipe"><SwipeView /></Route>
+                <Route path="/mypage/planet"><MyPlanet /></Route>
             </BrowserRouter>
         )
     }
