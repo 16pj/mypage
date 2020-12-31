@@ -39,4 +39,4 @@ export default class Car extends React.Component {
     }
 }
 
-// module.exports = sum;
+module.exports = sum;
