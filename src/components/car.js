@@ -1,9 +1,13 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 
+<<<<<<< HEAD
 function sum(a, b) {
     return a + b
 }
+=======
+import {sum} from "../common/common"
+>>>>>>> master
 
 export default class Car extends React.Component {
 
@@ -39,4 +43,7 @@ export default class Car extends React.Component {
     }
 }
 
+<<<<<<< HEAD
 module.exports = sum;
+=======
+>>>>>>> master
